@@ -1,0 +1,63 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>myproject</display-name>
+      <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.service.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.service.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.service.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GoodsServlet</servlet-name>
+        <servlet-class>com.service.GoodsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsServlet</servlet-name>
+        <url-pattern>/GoodsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ShowServlet</servlet-name>
+        <servlet-class>com.service.ShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowServlet</servlet-name>
+        <url-pattern>/ShowServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.service.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+        <servlet>
+        <servlet-name>LogServlet</servlet-name>
+        <servlet-class>com.service.LogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogServlet</servlet-name>
+        <url-pattern>/LogServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

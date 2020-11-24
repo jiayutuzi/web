@@ -1,0 +1,17 @@
+com\bean\Goods.class
+com\dao\CartDao.class
+com\service\LogServlet.class
+com\dao\Sendemail.class
+com\service\LoginServlet.class
+com\bean\Cart.class
+com\service\CartServlet.class
+com\utils\JdbcUtils.class
+com\bean\Log.class
+com\dao\GoodsDao.class
+com\dao\LogDao.class
+com\bean\User.class
+com\service\GoodsServlet.class
+com\service\ShowServlet.class
+com\service\LogoutServlet.class
+com\service\RegisterServlet.class
+com\dao\UserDAo.class
