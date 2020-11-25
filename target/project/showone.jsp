@@ -32,6 +32,7 @@
 		</div>
         
         <form action="CartServlet?action=addCart" method="post">
+            <input class="button"  type="button" onclick="window.location.href='ShowServlet'" value="商城"/>
             <hr>
             <div class="good">
 				<h3><%=good.Getname()%></h3>

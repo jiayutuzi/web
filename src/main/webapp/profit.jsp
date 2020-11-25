@@ -36,7 +36,7 @@
                     for(Log p:list){
             %>
             <div class="log">
-				<p><%=p.Gettime()%>:用户 <%=p.Getuser()%>购买了商品<%=p.Getname()%>,商品id为：<%=p.Getid()%>,件数:<%=p.Getnumber()%>,商品单价：<%=p.Getprice()%> <a href="javaScript:deleteProduct('<%=p.Gettime()%>');">删除</a></p>
+				<p><%=p.Gettime()%>:用户 <%=p.Getuser()%>购买了商品<%=p.Getname()%>,商品id为：<%=p.Getid()%>,件数:<%=p.Getnumber()%>,商品单价：<%=p.Getprice()%> <a href="javaScript:deleteProduct('<%=p.Gettime()%>+<%=p.Getid()%>');">删除</a></p>
 			</div>
             <%          
                     }
@@ -67,10 +67,12 @@
         profit.innerHTML=sum_profit;
     }
 </script>
+
 <script>
-    function deleteProduct(time) {
+    function deleteProduct(pram) {
+        var p=pram.split("+");
         if(confirm("是否删除数据")){
-            location.href="LogServlet?action=delete&time="+time;
+            location.href="LogServlet?action=delete&time="+p[0]+"&page=profit.jsp"+"&id="+p[1];
         }
     }
 </script>

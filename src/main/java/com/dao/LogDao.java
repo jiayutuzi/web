@@ -107,15 +107,16 @@ public class LogDao {
         }
         return log_list;
     }
-    public void delete(String time)
+    public void delete(String time,String id)
     {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = JdbcUtils.getConnection();
-            String sql = "delete from log where time=?";
+            String sql = "delete from log where time=? and id =? ";
             preparedStatement = (PreparedStatement)connection.prepareStatement(sql);
             preparedStatement.setString(1, time);
+            preparedStatement.setString(2, id);
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -8,6 +8,7 @@ public class JdbcUtils
     private static final String JDBC_URL="jdbc:mysql://localhost:3306/user?serverTimezone=UTC";
 
     private static final String DB_User="root";
+
     private static final String DB_Password="Losorin123,,,";
 
     static Connection conn=null;

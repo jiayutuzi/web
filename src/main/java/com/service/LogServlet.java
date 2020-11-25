@@ -38,13 +38,42 @@ public class LogServlet extends HttpServlet{
         {
             LogDao logDao=new LogDao();
             String time=request.getParameter("time");
+            String id=request.getParameter("id");
             HttpSession session=request.getSession();
             String user=(String)session.getAttribute("user");
-            logDao.delete(time);
+            logDao.delete(time,id);
             List<Log> log_list=new ArrayList<>();
             log_list=logDao.showlog(user);
-            request.setAttribute("log", log_list);
-            request.getRequestDispatcher("log.jsp?username="+user).forward(request,response);
+            String page=request.getParameter("page");
+            if(page.equals("profit.jsp"))
+            {
+                int number=0;
+                double profit=0;
+                for(int i=0;i<log_list.size();i++)
+                {
+                    if(log_list.get(i).Getstatus().equals("浏览"))
+                    {
+                        log_list.remove(i);
+                        i--;
+                    }
+                    else
+                    {
+                        number+=log_list.get(i).Getnumber();
+                        double price=Double.parseDouble(log_list.get(i).Getprice());
+                        profit+=price*log_list.get(i).Getnumber();
+                    }    
+                }
+                DecimalFormat df= new DecimalFormat("######0.00"); 
+                String sum_price=df.format(profit);
+                String num=String.valueOf(number);
+                request.setAttribute("profit", log_list);
+                request.getRequestDispatcher("profit.jsp?username=" + user + "&price=" + sum_price + "&number="+num).forward(request,response);
+            }
+            else
+            {
+                request.setAttribute("log", log_list);
+                request.getRequestDispatcher(page+"?username="+user).forward(request,response);
+            }
         }
         if(action.equals("profit"))
         {
