@@ -6,12 +6,12 @@
 <html>
     <head>
     <head>
-        <title>我的商品</title>
+        <title>收益统计</title>
         <link rel="stylesheet" type="text/css" href="css/shopping.css"/>
     </head>
     <body>
 		<div class="header">
-			<h1>我的商品</h1>   
+			<h1>收益统计</h1>   
 			<div class="login">
 				<form action="LogoutServlet" method="post">
 				<p id="user">未登录</p>

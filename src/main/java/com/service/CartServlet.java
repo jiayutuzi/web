@@ -75,9 +75,7 @@ public class CartServlet extends HttpServlet {
             Cart cart = new Cart();
             cart = cartDao.gotoupdate(id, user);
             request.setAttribute("gotoupdate", cart);
-            String sum_price = cartDao.Getprice(user);
-            request.getRequestDispatcher("cart.jsp?username=" + user + "&price=" + sum_price).forward(request,
-                    response);
+            request.getRequestDispatcher("updatecart.jsp").forward(request,response);
         }
         if (action.equals("update")) {
             CartDao cartDao = new CartDao();

@@ -37,7 +37,6 @@ public class CartDao {
                 p.Setuser(user);
                 cart.add(p);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }catch(Exception e1)

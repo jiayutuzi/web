@@ -40,7 +40,7 @@
 				<p>商品id：<%=p.Getid()%></p>
 				<p>价格：<%=p.Getprice()%></p>
 				<p>数量: <%=p.Getnumber()%></p>
-                <a href="CartServlet?action=gotoUpdate&id=<%=p.Getid()%>">修改</a>
+                <a href="GoodsServlet?action=gotoUpdate&id=<%=p.Getid()%>">修改</a>
                 <a href="javaScript:deleteProduct(<%=p.Getid()%>);">删除</a>
                 <hr>
 			</div>

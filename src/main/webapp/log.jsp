@@ -6,12 +6,12 @@
 <html>
     <head>
     <head>
-        <title>我的商品</title>
+        <title>客户日志</title>
         <link rel="stylesheet" type="text/css" href="css/shopping.css"/>
     </head>
     <body>
 		<div class="header">
-			<h1>我的商品</h1>   
+			<h1>客户日志</h1>   
 			<div class="login">
 				<form action="LogoutServlet" method="post">
 				<p id="user">未登录</p>
@@ -67,7 +67,7 @@
 <script>
     function deleteProduct(pram) {
         var p=pram.split("+");
-        if(confirm(pram)){
+        if(confirm("是否删除数据")){
             location.href="LogServlet?action=delete&time="+p[0]+"&page=log.jsp"+"&id="+p[1];
         }
     }
